@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ha0l.sqlseccode.dao.UserDao">
+    <!--预编译处理-->
+    <select id="selectUserById" parameterType="integer" resultType="Hashmap">
+        SELECT
+            id, username, password FROM tb_users WHERE id = #{userId}
+    </select>
+    <!--非预编译处理-->
+    <select id="selectUserByName" parameterType="string" resultType="Hashmap">
+        SELECT
+            id, username, password FROM tb_users WHERE username = ${username}
+    </select>
+</mapper>
