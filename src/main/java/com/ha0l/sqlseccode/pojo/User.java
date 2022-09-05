@@ -1,6 +1,7 @@
 package com.ha0l.sqlseccode.pojo;
 
 import lombok.Data;
+import org.hibernate.annotations.Table;
 
 import java.io.Serializable;
 

@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public HashMap selectInfoByName(String username) {
-        HashMap map = userDao.selectUserByName(username);
+        HashMap map = userDao.selectUsersByName(username);
         return map;
     }
 }
